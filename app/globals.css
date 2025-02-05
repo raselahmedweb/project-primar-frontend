@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #F8FAFC;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .btn-primary {
+    @apply bg-gray-200 border border-gray-300 text-gray-900 sm:text-sm block w-full pl-9 p-2 lg:p-2.5;
+}
+}
+
+
+/* blog skeleton style */
+.container {
+  max-width: 100%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+
+.cols {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+
+.col {
+  margin: 0 15px;
+  width: 100%;
+}
+
+
+.sk_bg {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: sk_bg_animation;
+  animation-timing-function: linear;
+  background: #0e0e0e;
+  background: linear-gradient(to right, #000 8%, #333333 18%, #444444 33%);
+  background-size: 800px 104px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+.sk_bg.big {
+  height: 120px;
+}
+
+
+.sk_bg.small {
+  height: 50px;
+}
+
+
+@keyframes sk_bg_animation{
+  0%{background-position:-468px 0}
+  100%{background-position:468px 0}
+}
+
+
+@-webkit-keyframes sk_bg_animation{
+  0%{background-position:-468px 0}
+  100%{background-position:468px 0}
+}
